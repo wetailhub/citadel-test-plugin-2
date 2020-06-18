@@ -1,22 +1,19 @@
 <?php
+
 /**
- * @package Hello_Molly
- * @version 1.1
- */
-/*
-Plugin Name: MU TEST PLUGIN 1
-Plugin URI: http://wordpress.org/plugins/hello-dolly/
-Description: Mega test plugin 1 (MU)
-Author: Matt Mullenweg
-Version: 1.6
-Author URI: http://ma.tt/
+	Plugin Name: Citadel Test Plugin 2
+	Description: Mega test plugin 2
+	Author: Wetail AB
+	Version: 1.0
 */
 
-function show_plugin_tplgn_mu_1( $tpl ){
-	print_r('PLUGIN 1 IS HERE');
-	return $tpl;
-}
-
-add_filter( 'template_include', 'show_plugin_tplgn_mu_1' );
-
-?>
+add_action( 'admin_footer', function(){
+	?>
+	<div style="display: block; color: #000; position: absolute; z-index: 100; bottom: 20px; right: 20px; background: #fceead; border: 1px solid orangered">
+		<p>
+			Citadel Test Plugin 2<br/>
+			V. 1.0
+		</p>
+	</div>
+	<?php
+} );
